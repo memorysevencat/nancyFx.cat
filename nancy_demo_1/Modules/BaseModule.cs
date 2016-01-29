@@ -56,8 +56,10 @@ namespace nancy_demo.Modules
                 Model = value;
             }
         }
+        
         public BaseModule() : base()
         {
+
             Dictionary<string, string> dic = new Dictionary<string, string>{{"1","A"}, {"2","B"}};
             Bootstrapper bt = new Bootstrapper();
             bt.Dispose();
@@ -101,7 +103,7 @@ namespace nancy_demo.Modules
             structB.val = 40;
             string obstr = objectA.val + "." + objectB.val + "." + structA.val + "." + structB.val;
 
-            ViewsModel.UserInfo ui = (ViewsModel.UserInfo)new ViewsModel.UserInfo().installUser(new ViewsModel.UserInfo() { Age = 27, Gender = "girl", Name = "xx" });
+            ViewsModel.UserInfo ui = (ViewsModel.UserInfo)new ViewsModel.UserInfo().installUser(new ViewsModel.UserInfo() { passWord  = "girl", userName = "xx" });
 
 
 

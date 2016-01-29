@@ -20,8 +20,8 @@ namespace nancy_demo.Modules
                 r.identiy = true;
                 List<ViewsModel.User> l = new List<ViewsModel.User>();
                 ViewsModel.User u = new ViewsModel.User();
-                u.Age = 20;
-                u.Name = "cat";
+                u.passWord = "cat";
+                u.userName = "cat";
                 l.Add(u);
                 r.entify = l;
                 return Response.AsJson(r);
@@ -41,7 +41,7 @@ namespace nancy_demo.Modules
             };
             Get["/login/{value}"] = paramater =>
             {
-                model.user = new ViewsModel.User { Name = "7cat", Age = 20, Gender = "BOY" };
+                model.user = new ViewsModel.User { userName = "7cat", passWord = "BOY" };
                 model.news = new ViewsModel.News { title = "标题", content = "内容" };
                 return View["Home", model];
                 //return paramater.value;
@@ -66,7 +66,7 @@ namespace nancy_demo.Modules
             };
             Get["/bind"] = parameters =>
             {
-                int age = new ViewsModel.User().installUser(new ViewsModel.User()).Age;
+                string userName = new ViewsModel.User().installUser(new ViewsModel.User()).userName;
                 return View["/Home"];
             };
             Post["/bind1"] = parameters =>
@@ -76,7 +76,7 @@ namespace nancy_demo.Modules
                 var user3 = this.BindTo(new ViewsModel.User());
                 //backlist
                 var user4 = this.Bind<ViewsModel.User>("Gender");
-                var user5 = this.Bind<ViewsModel.User>(u => u.Gender);
+                var user5 = this.Bind<ViewsModel.User>(u => u.userName);
                 return View["/Home", user5];
             };
             Post["/bind2"] = parameters =>
@@ -90,7 +90,7 @@ namespace nancy_demo.Modules
                 var user3 = this.BindTo(new List<ViewsModel.User>());
                 //backlist
                 var user4 = this.Bind<List<ViewsModel.User>>("Gender");
-                var user5 = this.Bind<List<ViewsModel.User>>(u => new ViewsModel.User().Gender);
+                var user5 = this.Bind<List<ViewsModel.User>>(u => new ViewsModel.User().userName);
 
                 return View["/Home", user5];
             };

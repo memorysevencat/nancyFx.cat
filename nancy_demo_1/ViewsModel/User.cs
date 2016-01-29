@@ -12,16 +12,12 @@ namespace nancy_demo.ViewsModel
 
     public class User : setUser
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string Gender { get; set; }
-        public int Score { get; set; }
+        public string userName { get; set; }
+        public string passWord { get; set; }
         public User installUser(User u)
         {
-            u.Age = 1;
-            u.Name = "cat";
-            u.Gender = "boy";
-            u.Score = 80;
+            u.userName = "nicat";
+            u.passWord = "nicat";
             return u;
         }
     }

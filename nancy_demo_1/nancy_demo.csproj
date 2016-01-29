@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>nancy_demo_1</RootNamespace>
-    <AssemblyName>nancy_demo_1</AssemblyName>
+    <RootNamespace>nancy_demo</RootNamespace>
+    <AssemblyName>nancy_demo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -105,6 +105,10 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
       <Private>True</Private>
@@ -136,8 +140,11 @@
     </Content>
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\jsmodule.js" />
-    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\home.cshtml" />
     <None Include="Properties\PublishProfiles\lllllll.pubxml" />
+    <Content Include="Views\signin.cshtml" />
+    <Content Include="Views\signup.cshtml" />
+    <Content Include="Views\index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,10 +156,11 @@
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\jquery-1.11.1.min.js" />
-    <Content Include="test_jsmodule.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modules\HomeModule.cs" />
+    <Compile Include="Modules\SignModule.cs" />
     <Compile Include="ViewsModel\News.cs" />
     <Compile Include="ViewsModel\Photo.cs" />
     <Compile Include="ViewsModel\User.cs" />
@@ -161,7 +169,6 @@
     <Compile Include="Modules\AdminModule.cs" />
     <Compile Include="Modules\BaseModule.cs" />
     <Compile Include="Modules\Bootstrapper.cs" />
-    <Compile Include="Modules\js.cs" />
     <Compile Include="Modules\PhotoModule.cs" />
     <Compile Include="Modules\RootModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
