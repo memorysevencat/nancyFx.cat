@@ -1,2 +1,3 @@
 ### nancyFx.cat
-###### ASP.NET framework :nancyFx & angularjs
+###### ASP.NET nancyFx framework demo(run by vs2015+)
+###### the sample nancyFx demo,and u can use it to ur pro.
