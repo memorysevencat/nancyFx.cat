@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <div ng-repeat="x in names">{{x.name}}</div>
+    </div>
+    <form action="/photo/bind1" method="post">
+        <input type="text" name="Name" value="cat" />
+        <input type="text" name="Gender" value="boy" />
+        <input type="text" name="Gender" value="234,546,456,23,546,86,13" />
+        <input type="text" name="Age" value="20" />
+        <input type="submit" value="Submit" />
+    </form>
+    <form action="/user/register" method="post">
+        User 1:<input type="text" name="Name[0]" value="thecodejunkie" />
+        Age <input type="text" name="Age[0]" value="20" />
+        Gender <input type="text" name="Gender[0]" value="boy" />
+        Score <input type="text" name="Score[0]" value="100" />
+        <br />
+        User 2:<input type="text" name="Name[1]" value="grumpydev" />
+        Age <input type="text" name="Age[1]" value="20" />
+        Gender <input type="text" name="Gender[1]" value="boy" />
+        Score <input type="text" name="Score[1]" value="100" />
+        <br />
+        User 3:<input type="text" name="Name[2]" value="jchannon" />
+        Age <input type="text" name="Age[2]" value="20" />
+        Gender <input type="text" name="Gender[2]" value="boy" />
+        Score <input type="text" name="Score[2]" value="100" />
+        <br />
+        User 4:<input type="text" name="Name[3]" value="prabirshrestha" />
+        Age <input type="text" name="Age[3]" value="20" />
+        Gender <input type="text" name="Gender[3]" value="boy" />
+        Score <input type="text" name="Score[3]" value="100" />
+        <br />
+        User 5:<input type="text" name="Name[4]" value="phillip-haydon" />
+        Age <input type="text" name="Age[4]" value="20" />
+        Gender <input type="text" name="Gender[4]" value="boy" />
+        Score <input type="text" name="Score[4]" value="100" />
+        <br />
+        <input type="submit" value="Test the binding thingy" />
+    </form>
+    <script src="/scripts/angular.min.js"></script>
+    <script src="/scripts/jsmodule.js"></script>
+</body>
+</html>

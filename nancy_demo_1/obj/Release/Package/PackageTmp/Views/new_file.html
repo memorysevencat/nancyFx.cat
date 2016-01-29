@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<script src="/scripts/angular.min.js"></script>
+	<body>
+		<div ng-app="myApp" ng-controller="customersCtrl"> 
+
+<ul>
+  <li ng-repeat="x in names">
+    {{ '姓名：'+x.Name + ', 国家：' + x.Country }}
+  </li>
+</ul>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("/home/1")
+    .success(function(response) {$scope.names = response.records;});
+});
+
+</script>
+	</body>
+</html>
