@@ -1,2 +1,2 @@
 ### nancyFx.cat
-###### ASP.NET framework :nancyFx
+###### ASP.NET framework :nancyFx & angularjs
