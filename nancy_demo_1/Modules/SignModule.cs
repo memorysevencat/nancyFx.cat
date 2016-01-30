@@ -16,6 +16,10 @@ namespace nancy_demo.Modules
             {
                 return View["/signup"];
             };
+            Get["/out"] = paramater =>
+            {
+                return View["/signout"];
+            };
             Get["/in"] = paramater =>
             {
                 return View["/signin"];
@@ -29,12 +33,9 @@ namespace nancy_demo.Modules
             };
             Post["/in"] = _ =>
             {
-                List<ViewsModel.User> list = new List<ViewsModel.User>();
                 var user = this.Bind<ViewsModel.User>();
-                list.Add(user);
                 //if (user.userName.Equals("nicat") && user.passWord.Equals("nicat"))
-                //return View["", list];
-                return View["/home", list];
+                return View["/index", user];
                 //else return View["/home"];
 
             };

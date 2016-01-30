@@ -145,7 +145,7 @@
     <Content Include="style\bootstrap.min.css" />
     <None Include="Views\signin.sshtml" />
     <None Include="Views\signup.sshtml" />
-    <Content Include="Views\index.cshtml" />
+    <None Include="Views\index.sshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

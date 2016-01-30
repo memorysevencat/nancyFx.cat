@@ -11,6 +11,7 @@ namespace nancy_demo.ViewsModel
     }
     public class User : setUser
     {
+        public int userId { get; set; }
         public string userName { get; set; }
         public string userGender { get; set; }
         public int userAge { get; set; }
@@ -21,7 +22,7 @@ namespace nancy_demo.ViewsModel
             u.userGender = "boy";
             u.userAge = 25;
             u.passWord = "nicat";
-            
+            u.userId = 0;
             return u;
         }
     }
