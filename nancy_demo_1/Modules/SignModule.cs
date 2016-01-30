@@ -22,15 +22,20 @@ namespace nancy_demo.Modules
             };
             Post["/up"] = _ =>
             {
+                List<ViewsModel.User> list = new List<ViewsModel.User>();
                 var user = this.Bind<ViewsModel.User>();
-                return View["/index/signup", user];
+                list.Add(user);
+                return View["/home", list];
             };
             Post["/in"] = _ =>
             {
+                List<ViewsModel.User> list = new List<ViewsModel.User>();
                 var user = this.Bind<ViewsModel.User>();
-                if (user.userName.Equals("nicat") && user.passWord.Equals("nicat"))
-                    return View["/home", user];
-                else return View["/home"];
+                list.Add(user);
+                //if (user.userName.Equals("nicat") && user.passWord.Equals("nicat"))
+                //return View["", list];
+                return View["/home", list];
+                //else return View["/home"];
 
             };
         }

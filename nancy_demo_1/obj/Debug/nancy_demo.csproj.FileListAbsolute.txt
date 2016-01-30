@@ -107,3 +107,4 @@ D:\VS2015\nancyFx.cat\nancy_demo_1\bin\zh-Hans\System.Web.WebPages.Deployment.re
 D:\VS2015\nancyFx.cat\nancy_demo_1\bin\zh-Hans\System.Web.WebPages.Razor.resources.dll
 D:\VS2015\nancyFx.cat\nancy_demo_1\obj\Debug\nancy_demo.dll
 D:\VS2015\nancyFx.cat\nancy_demo_1\obj\Debug\nancy_demo.pdb
+D:\VS2015\nancyFx.cat\nancy_demo_1\obj\Debug\nancy_demo.csprojResolveAssemblyReference.cache

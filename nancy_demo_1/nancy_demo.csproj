@@ -140,10 +140,11 @@
     </Content>
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\jsmodule.js" />
-    <Content Include="Views\home.cshtml" />
+    <None Include="Views\home.sshtml" />
     <None Include="Properties\PublishProfiles\lllllll.pubxml" />
-    <Content Include="Views\signin.cshtml" />
-    <Content Include="Views\signup.cshtml" />
+    <Content Include="style\bootstrap.min.css" />
+    <None Include="Views\signin.sshtml" />
+    <None Include="Views\signup.sshtml" />
     <Content Include="Views\index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

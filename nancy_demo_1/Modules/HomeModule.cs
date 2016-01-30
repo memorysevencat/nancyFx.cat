@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nancy.ModelBinding;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,17 +12,27 @@ namespace nancy_demo.Modules
         {
             Get["/"] = p =>
             {
-
-                return View["/home"];
+                return View["/home", userList()];
             };
             Get["/Views/{value}"] = p =>
             {
-                return View["/home"];
+                return View["/home", userList()];
             };
             Get["/home"] = _ =>
             {
-                return View["/home"];
+                return View["/home", userList()];
             };
+        }
+        public static List<ViewsModel.User> userList()
+        {
+            List<ViewsModel.User> list = new List<ViewsModel.User>();
+            for (int i = 0; i < 4; i++)
+            {
+                ViewsModel.User u = new ViewsModel.User();
+                u = u.installUser(u);
+                list.Add(u);
+            }
+            return list;
         }
     }
 }

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>sign up</title>
+    <link href="/style/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            background-color: #063c4a;
+        }
+    </style>
+</head>
+<body> 
+	<div class="container-fluid">
+    <form action="/sign/up" method="post">
+		<div class="row">
+			<div class="col-md-12" style="text-align:center;">
+				<input type="text" name="username" value="nicat" />
+				<input type="text" name="password" value="nicat" />
+				<input type="text" name="userage" value="25" />
+				<input type="text" name="usergender" value="boy" />
+				<input type="submit" value="sign up" />
+			</div>
+		</div>
+    </form>
+	</div>
+</body>
+</html>

@@ -9,15 +9,19 @@ namespace nancy_demo.ViewsModel
     {
         User installUser(User u);
     }
-
     public class User : setUser
     {
         public string userName { get; set; }
+        public string userGender { get; set; }
+        public int userAge { get; set; }
         public string passWord { get; set; }
         public User installUser(User u)
         {
             u.userName = "nicat";
+            u.userGender = "boy";
+            u.userAge = 25;
             u.passWord = "nicat";
+            
             return u;
         }
     }

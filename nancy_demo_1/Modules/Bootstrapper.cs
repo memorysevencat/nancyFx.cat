@@ -13,6 +13,7 @@ namespace nancy_demo.Modules
             base.ConfigureConventions(nancyConventions);
             nancyConventions.StaticContentsConventions.Clear();
             nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("/scripts"));
+            nancyConventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("/style"));
         }
     }
 }
